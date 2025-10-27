@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🌍 Travel Recommendation</div>
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('about')">About Us</a>
+            <a href="#" onclick="showSection('contact')">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home-section">
+            <div class="hero">
+                <h1>Discover Your Next Adventure</h1>
+                <p>Explore breathtaking destinations around the world. Whether you're looking for beaches, temples, or vibrant countries, we'll help you find the perfect travel experience.</p>
+            </div>
+
+            <div class="search-section">
+                <h2 style="color: #667eea; margin-bottom: 1rem;">Search Destinations</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search for beaches, temples, countries...">
+                    <button class="btn btn-search" onclick="searchDestinations()">Search</button>
+                    <button class="btn btn-reset" onclick="resetSearch()">Reset</button>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection">
+                <h2 style="color: #667eea;">Featured Destinations</h2>
+                <div class="results-grid" id="resultsGrid">
+                    <div class="no-results">
+                        <h3>Start your search!</h3>
+                        <p>Enter keywords like "beach", "temple", or country names to discover amazing destinations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div id="about-section" class="about-section hidden">
+            <h2>About Us</h2>
+            <p>Welcome to Travel Recommendation, your trusted companion in discovering the world's most captivating destinations. We are passionate about connecting travelers with unforgettable experiences, from pristine beaches to ancient temples and vibrant cultures.</p>
+            <p>Our mission is to inspire and guide travelers by providing curated recommendations that match their interests and preferences. Whether you're seeking relaxation, adventure, or cultural immersion, we're here to help you plan your perfect journey.</p>
+            
+            <h3 style="color: #667eea; margin-top: 2rem; margin-bottom: 1rem;">Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Sarah Johnson</h4>
+                    <p>Founder & Travel Expert</p>
+                </div>
+                <div class="team-member">
+                    <h4>Michael Chen</h4>
+                    <p>Destination Specialist</p>
+                </div>
+                <div class="team-member">
+                    <h4>Emma Williams</h4>
+                    <p>Content Curator</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact-section" class="contact-section hidden">
+            <h2>Contact Us</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Have questions or suggestions? We'd love to hear from you!</p>
+            
+            <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-search">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
